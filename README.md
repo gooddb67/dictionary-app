@@ -1,4 +1,4 @@
-# Frontend Mentor - Dictionary web app
+#  Dictionary app
 
 ![Design preview for the Dictionary web app coding challenge](./preview.jpg)
 
