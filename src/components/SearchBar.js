@@ -1,21 +1,36 @@
 import { useState } from "react";
+import "../styles/searchBar.scss";
 
 function SearchBar({ onSubmit }) {
   const [term, setTerm] = useState("");
+  const [hasError, setHasError] = useState(false);
+
+  const handleChange = (event) => {
+    setHasError("");
+    setTerm(event.target.value);
+  };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    onSubmit(term);
+    setHasError(false);
+
+    if (term) {
+      onSubmit(term);
+    } else {
+      setHasError(true);
+    }
   };
 
   return (
     <form onSubmit={handleFormSubmit}>
       <input
         value={term}
-        onChange={(e) => setTerm(e.target.value)}
-        type="search"
+        onChange={handleChange}
+        className="search"
+        placeholder="Search for any word…"
       />
+      {hasError && <p>Whoops, can't be empty...</p>}
     </form>
   );
 }

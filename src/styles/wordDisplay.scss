@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.display__word {
+  font-size: 64px;
+  line-height: 77px;
+}
+
+.display__phonetic {
+  color: #a445ed;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

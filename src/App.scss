@@ -1,0 +1,30 @@
+.btn-audio {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:before {
+    content: url("./assets/images/play-button.svg");
+  }
+
+  &:hover {
+    &:before {
+      content: url("./assets/images/play-button-hover.svg");
+    }
+  }
+}
+
+.app-container {
+  max-width: 736px;
+  margin: auto;
+}
+
+.separator {
+  &:after {
+    content: "";
+    width: 100%;
+    background-color: #e9e9e9;
+    height: 1px;
+    display: block;
+  }
+}
