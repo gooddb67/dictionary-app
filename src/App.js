@@ -37,8 +37,8 @@ function App() {
   }, [theme]);
 
   return (
-    <div className="app-container">
-      <div>
+    <div className="app-container bg-yellow-100 dark:bg-black">
+      <div className="flex">
         <Dropdown options={dropdownOptions} />
         <Toggle isChecked={theme} toggleTheme={setTheme} />
       </div>

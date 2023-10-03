@@ -33,7 +33,7 @@ function Dropdown({ options, onChange, value }) {
   const renderedOptions = options.map((option) => {
     return (
       <div
-        className="hover:bg-sky-100 rounded cursor-pointer p-1"
+        className="hover:bg-sky-100 dark:text-white rounded cursor-pointer p-1"
         onClick={() => handleOptionClick(option)}
         key={option.value}
       >
@@ -45,13 +45,13 @@ function Dropdown({ options, onChange, value }) {
   return (
     <div ref={divEl} className="w-48 relative">
       <div
-        className="flex justify-between items-centered cursor-pointer "
+        className="flex justify-between dark:text-white items-centered cursor-pointer "
         onClick={handleClick}
       >
         {value?.label || "Select..."}
       </div>
       {isOpen && (
-        <div className="absolute top-full">
+        <div className="absolute dark:text-white top-full">
           {renderedOptions}
         </div>
       )}

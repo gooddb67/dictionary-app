@@ -7,7 +7,7 @@ function Synonyms({ list }) {
 
   const synonyms = list.map((syn, index) => {
     return (
-      <span key={syn} className="text-purple font-bold">
+      <span key={index} className="text-purple font-bold">
         {(index ? ", " : "") + syn}
       </span>
     );

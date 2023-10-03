@@ -15,7 +15,7 @@ function WordDisplay({ apiResult }) {
       return (
         <Fragment key={index}>
           <div
-            className="flex justify-between mt-3"
+            className="flex dark:text-white justify-between mt-3"
             key={data.word}
           >
             <div>

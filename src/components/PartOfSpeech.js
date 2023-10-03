@@ -6,7 +6,7 @@ function PartOfSpeech({ meanings }) {
   const partOfSpeech = meanings.map((part, index) => {
     return (
       <Fragment key={index}>
-        <div className="flex items-center gap-5 mt-8">
+        <div className="flex dark:text-white items-center gap-5 mt-8">
           <p className="part-of-speech font-bold italic text-2xl">
             {part.partOfSpeech}
           </p>

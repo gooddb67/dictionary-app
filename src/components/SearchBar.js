@@ -27,7 +27,7 @@ function SearchBar({ onSubmit }) {
       <input
         value={term}
         onChange={handleChange}
-        className="search"
+        className="search focus:outline-none focus:ring focus:ring-purple"
         placeholder="Search for any word…"
       />
       {hasError && <p>Whoops, can't be empty...</p>}

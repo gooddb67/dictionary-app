@@ -8,7 +8,9 @@ function Definitions({ list }) {
   const definitions = list.map((def, index) => {
     return (
       <li key={index} className="mb-2 last:mb-10">
-        <span className="block mb-2">{def.definition}</span>
+        <span className="block dark:text-white mb-2">
+          {def.definition}
+        </span>
         <span className="text-gray-dark">
           {def.example && `"${def.example}"`}
         </span>
