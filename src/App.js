@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import SearchBar from "./components/SearchBar";
 import searchWord from "./api";
@@ -18,6 +18,7 @@ const dropdownOptions = [
 function App() {
   const [apiResult, setApiResult] = useState([]);
   const [errorMessage, setHasErrorMessage] = useState("");
+  const [theme, setTheme] = useState("light");
 
   const handleSubmit = async (term) => {
     const result = await searchWord(term);
@@ -30,11 +31,16 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    document.body.classList.toggle(theme);
+    return () => document.body.classList.remove(theme);
+  }, [theme]);
+
   return (
     <div className="app-container">
       <div>
         <Dropdown options={dropdownOptions} />
-        <Toggle />
+        <Toggle isChecked={theme} toggleTheme={setTheme} />
       </div>
       <SearchBar onSubmit={handleSubmit} />
       {errorMessage ? (
